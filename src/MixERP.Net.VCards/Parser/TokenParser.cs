@@ -4,6 +4,7 @@ using MixERP.Net.VCards.Extensions;
 using MixERP.Net.VCards.Models;
 using System.Text.RegularExpressions;
 using System.Linq;
+using System.Text;
 
 namespace MixERP.Net.VCards.Parser
 {
@@ -126,11 +127,15 @@ namespace MixERP.Net.VCards.Parser
                 return tokens;
             }
 
-            var reader = new StringReader(contents);
-            string line;
-            while (null != (line = reader.ReadLine()))
+            var unfolded = Regex.Replace(contents, @"\r\n\s", (match) => string.Empty);
+
+            using (var reader = new StringReader(unfolded))
             {
-                tokens.Add(GetToken(line));
+                string line;
+                while (null != (line = reader.ReadLine()))
+                {
+                    tokens.Add(GetToken(line));
+                }
             }
 
             return tokens;
