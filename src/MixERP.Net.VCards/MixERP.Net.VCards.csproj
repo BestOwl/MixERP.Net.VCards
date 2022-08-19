@@ -1,23 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <TargetFrameworks>netstandard1.4;netstandard2.0;net5.0</TargetFrameworks>
+    <VersionPrefix>1.0.1</VersionPrefix>
   </PropertyGroup>
 
-	<PropertyGroup>
-		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<PackageId>NightOwl.$(AssemblyName)</PackageId>
-		<Authors>MixERP,Binod Nirvan,NightOwl</Authors>
-		<Description>VCards is a cross-platform, standard-compliant, lightweight, and forgiving vCard parser written in C# which supports parsing and serializing vCards.</Description>
-		<PackageProjectUrl>https://github.com/BestOwl/MixERP.Net.VCards</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/BestOwl/MixERP.Net.VCards</RepositoryUrl>
-		<PackageTags>vcard;vcf;mixerp</PackageTags>
-		<PackageLicenseFile>LICENSE.MD</PackageLicenseFile>
-	</PropertyGroup>
+  <PropertyGroup>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>NightOwl.$(AssemblyName)</PackageId>
+    <Authors>MixERP,Binod Nirvan,NightOwl</Authors>
+    <Description>VCards is a cross-platform, standard-compliant, lightweight, and forgiving vCard parser written in C# which supports parsing and serializing vCards.</Description>
+    <PackageProjectUrl>https://github.com/BestOwl/MixERP.Net.VCards</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/BestOwl/MixERP.Net.VCards</RepositoryUrl>
+    <PackageTags>vcard;vcf;mixerp</PackageTags>
+    <PackageLicenseFile>LICENSE.MD</PackageLicenseFile>
+  </PropertyGroup>
 
-	<ItemGroup>
-		<None Include="..\..\LICENSE.MD" Pack="true" PackagePath="LICENSE.MD"/>
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\LICENSE.MD" Pack="true" PackagePath="LICENSE.MD" />
+  </ItemGroup>
 
 </Project>
